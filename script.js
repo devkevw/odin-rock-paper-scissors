@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (i = 0; i <5 ; i++) {
+    for (let i = 0; i <5 ; i++) {
         let playerSelection = prompt("Please enter your hand:"); 
         // ignore input validation for now
         let computerSelection = getComputerChoice();
