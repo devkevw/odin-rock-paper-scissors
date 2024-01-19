@@ -63,6 +63,7 @@ img {
     font-size: 18px;
     font-weight: 700;
 
+
 }
 
 .hands-img {
@@ -79,4 +80,13 @@ h2 {
     font-size: 30px;
     font-weight: 700;
     min-width: 135px;
+}
+
+/* hover */
+.rock:hover, 
+.paper:hover,
+.scissors:hover {
+    transition: color 0.2s ease;
+    color: #999;
+    cursor: pointer;
 }
