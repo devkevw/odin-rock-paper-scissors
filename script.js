@@ -65,8 +65,6 @@ const computerScoreText = document.querySelector(".computer-score .number")
 // rock
 const rockSection = document.querySelector(".rock")
 rockSection.addEventListener("click", function () {
-    console.log("rock was clicked");
-
     const computerSelection = getComputerChoice();
     const resultText = playRound('rock', computerSelection)
 
@@ -80,8 +78,34 @@ rockSection.addEventListener("click", function () {
 })
 
 // paper
+const paperSection = document.querySelector(".paper")
+paperSection.addEventListener("click", function () {
+    const computerSelection = getComputerChoice();
+    const resultText = playRound('paper', computerSelection)
+
+    // insert hands
+    playerHand.textContent = 'Paper';
+    computerHand.textContent = computerSelection;
+    roundResult.textContent = resultText;
+
+    // update score and see if there is a winner
+    updateScore(resultText);
+})
 
 // scissors
+const scissorsSection = document.querySelector(".scissors")
+scissorsSection.addEventListener("click", function () {
+    const computerSelection = getComputerChoice();
+    const resultText = playRound('scissors', computerSelection)
+
+    // insert hands
+    playerHand.textContent = 'Scissors';
+    computerHand.textContent = computerSelection;
+    roundResult.textContent = resultText;
+
+    // update score and see if there is a winner
+    updateScore(resultText);
+})
 
 
 
