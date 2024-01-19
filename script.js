@@ -25,31 +25,31 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i <5 ; i++) {
-        let playerSelection = prompt("Please enter your hand:"); 
-        // ignore input validation for now
-        let computerSelection = getComputerChoice();
-        // console.log(computerSelection);
+// function game() {
+//     for (let i = 0; i <5 ; i++) {
+//         let playerSelection = prompt("Please enter your hand:"); 
+//         // ignore input validation for now
+//         let computerSelection = getComputerChoice();
+//         // console.log(computerSelection);
 
-        // play round
-        let result = playRound(playerSelection, computerSelection);
-        let resultArray = result.split(" ");
-        // console.log(resultArray);
+//         // play round
+//         let result = playRound(playerSelection, computerSelection);
+//         let resultArray = result.split(" ");
+//         // console.log(resultArray);
 
-        if (resultArray[1] === "win!") {
-            playerScore++;
-        } else if (resultArray[1] === "lose!") {
-            computerScore++;
-        }
-        alert(result + "\nThe current score is:\nPlayer: " + playerScore
-         + "\nComputer: " + computerScore);
-    }
+//         if (resultArray[1] === "win!") {
+//             playerScore++;
+//         } else if (resultArray[1] === "lose!") {
+//             computerScore++;
+//         }
+//         alert(result + "\nThe current score is:\nPlayer: " + playerScore
+//          + "\nComputer: " + computerScore);
+//     }
 
-    if (playerScore > computerScore) {alert("You win!")}
-    else if (playerScore < computerScore) {alert("You lose!")}
-    else {alert("It's a tie!")}
-}
+//     if (playerScore > computerScore) {alert("You win!")}
+//     else if (playerScore < computerScore) {alert("You lose!")}
+//     else {alert("It's a tie!")}
+// }
 
 
 
