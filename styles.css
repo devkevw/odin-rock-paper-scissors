@@ -23,7 +23,7 @@ body {
 
 h1 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .score-txt {
@@ -41,7 +41,7 @@ h1 {
 
 .text {
     font-weight: 300;
-    font-size:24px;
+    font-size: 24px;
 }
 
 .hands-img{
@@ -89,4 +89,18 @@ h2 {
     transition: color 0.2s ease;
     color: #999;
     cursor: pointer;
+}
+
+.player-hand,
+.computer-hand,
+.round-result {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.round-result {
+    margin: 20px 0px 32.16px;
+    font-style: italic;
+    font-weight: 500;
+
 }

@@ -3,7 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-    // get random integer from 
+    // get random integer from 0-2
     let randomNum = Math.floor(Math.random() * 3);
     return HANDS[randomNum];
 }
@@ -25,31 +25,63 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// function game() {
-//     for (let i = 0; i <5 ; i++) {
-//         let playerSelection = prompt("Please enter your hand:"); 
-//         // ignore input validation for now
-//         let computerSelection = getComputerChoice();
-//         // console.log(computerSelection);
+function displayPlayerWon() {
 
-//         // play round
-//         let result = playRound(playerSelection, computerSelection);
-//         let resultArray = result.split(" ");
-//         // console.log(resultArray);
+}
 
-//         if (resultArray[1] === "win!") {
-//             playerScore++;
-//         } else if (resultArray[1] === "lose!") {
-//             computerScore++;
-//         }
-//         alert(result + "\nThe current score is:\nPlayer: " + playerScore
-//          + "\nComputer: " + computerScore);
-//     }
+function displayComputerWon() {
 
-//     if (playerScore > computerScore) {alert("You win!")}
-//     else if (playerScore < computerScore) {alert("You lose!")}
-//     else {alert("It's a tie!")}
-// }
+}
+
+function updateScore(result) {
+    let resultArray = result.split(" ");
+    if (resultArray[1] === "win!") {
+        playerScore++;
+
+        // change player score display
+        playerScoreText.textContent = playerScore;
+
+        if (playerScore === 5) {
+            displayPlayerWon();
+        }
+    } else if (resultArray[1] === "lose!") {
+        computerScore++;
+
+        // change computer score display
+        computerScoreText.textContent = computerScore;
+
+        if (computerScore === 5) {
+            displayComputerWon()
+        }
+    }
+}
+
+const playerHand = document.querySelector(".player-hand");
+const computerHand = document.querySelector(".computer-hand");
+const roundResult = document.querySelector(".round-result");
+const playerScoreText = document.querySelector(".player-score .number");
+const computerScoreText = document.querySelector(".computer-score .number")
+
+// rock
+const rockSection = document.querySelector(".rock")
+rockSection.addEventListener("click", function () {
+    console.log("rock was clicked");
+
+    const computerSelection = getComputerChoice();
+    const resultText = playRound('rock', computerSelection)
+
+    // insert hands
+    playerHand.textContent = 'Rock';
+    computerHand.textContent = computerSelection;
+    roundResult.textContent = resultText;
+
+    // update score and see if there is a winner
+    updateScore(resultText);
+})
+
+// paper
+
+// scissors
 
 
 
