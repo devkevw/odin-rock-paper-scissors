@@ -73,7 +73,7 @@ function updateScore(result) {
         if (playerScore === 5) {
             setTimeout(function() {
                 displayPlayerWon();
-            }, 0)
+            }, 10)
         }
     } else if (resultArray[1] === "lose!") {
         computerScore++;
@@ -85,7 +85,7 @@ function updateScore(result) {
         if (computerScore === 5) {
             setTimeout(function() {
                 displayComputerWon();
-            }, 0)
+            }, 10)
         }
     }
 }
