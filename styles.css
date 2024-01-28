@@ -14,6 +14,7 @@ body {
 .intro {
     margin-bottom: 70px;
 }
+
 .title {
     display: flex;
     font-size: 48px;
@@ -102,5 +103,27 @@ h2 {
     margin: 20px 0px 32.16px;
     font-style: italic;
     font-weight: 500;
+}
 
+.end {
+    min-height: 300px;
+}
+
+
+/* footer */
+h5 {
+    margin: 42.21px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.github {
+    height: 12px;
+    width: auto;
+    margin: 0;
 }
